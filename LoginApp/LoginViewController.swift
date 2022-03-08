@@ -18,10 +18,18 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func loginButtonPressed(_ sender: Any) {
+
+
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard userNameTextField.text == "Admin", passwordTextField.text == "123" else { return }
+        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        welcomeVC.welcomeMessage = userNameTextField.text
     }
 
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
-        guard let welcomeVC = segue.source as? WelcomeViewController else { return }
+        guard segue.source is WelcomeViewController else { return }
             clearPassword(AndUserName: true)
     }
 

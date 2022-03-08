@@ -38,7 +38,7 @@
                                 <state key="normal" title="Log in"/>
                                 <connections>
                                     <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4hM-SJ-C3r"/>
-                                    <segue destination="U7r-Hc-PyX" kind="show" id="3JS-cf-WgE"/>
+                                    <segue destination="U7r-Hc-PyX" kind="show" id="2JJ-yG-xx5"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="18R-md-Iom">
@@ -128,6 +128,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="E01-t5-WNW"/>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="kut-z2-sRb" id="EUv-Ix-RLT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ioi-Of-pEf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="0Km-t7-tWm" userLabel="Exit" sceneMemberID="exit"/>
@@ -137,6 +140,7 @@
         <!--Navigation Controller-->
         <scene sceneID="qaF-Dg-KYh">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ldP-ii-v1s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="wOI-Ms-oLY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
@@ -149,7 +153,6 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="yh5-V3-Pwi"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ldP-ii-v1s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="212" y="70"/>
         </scene>
