@@ -37,7 +37,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Log in"/>
                                 <connections>
-                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4hM-SJ-C3r"/>
+                                    <action selector="loginButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ba5-PX-0Oq"/>
                                     <segue destination="U7r-Hc-PyX" kind="show" id="2JJ-yG-xx5"/>
                                 </connections>
                             </button>
@@ -49,12 +49,18 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Forgot User Name?"/>
+                                        <connections>
+                                            <action selector="forgotUserNamePasswordPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="blJ-Ye-dgD"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrA-14-57k">
                                         <rect key="frame" x="137.5" y="0.0" width="117.5" height="28"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Forgot Password?"/>
+                                        <connections>
+                                            <action selector="forgotUserNamePasswordPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qVY-sW-Chz"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -107,7 +113,7 @@
                                     <segue destination="0Km-t7-tWm" kind="unwind" unwindAction="unwind:" id="6g5-2q-Nzc"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, User Name!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kut-z2-sRb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, User Name!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kut-z2-sRb">
                                 <rect key="frame" x="59" y="129" width="257" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -140,7 +146,6 @@
         <!--Navigation Controller-->
         <scene sceneID="qaF-Dg-KYh">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ldP-ii-v1s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="wOI-Ms-oLY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
@@ -153,6 +158,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="yh5-V3-Pwi"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ldP-ii-v1s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="212" y="70"/>
         </scene>
