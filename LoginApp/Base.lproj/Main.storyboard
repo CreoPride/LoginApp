@@ -44,7 +44,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="18R-md-Iom">
                                 <rect key="frame" x="60" y="220" width="255" height="28"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vbq-hz-9Z8">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vbq-hz-9Z8">
                                         <rect key="frame" x="0.0" y="0.0" width="117.5" height="28"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -53,7 +53,7 @@
                                             <action selector="forgotUserNamePasswordPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="blJ-Ye-dgD"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrA-14-57k">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrA-14-57k">
                                         <rect key="frame" x="137.5" y="0.0" width="117.5" height="28"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>

@@ -1,9 +1,9 @@
-//
-//  ViewController.swift
-//  LoginApp
-//
-//  Created by Konstantin Fomenkov on 08.03.2022.
-//
+    //
+    //  ViewController.swift
+    //  LoginApp
+    //
+    //  Created by Konstantin Fomenkov on 08.03.2022.
+    //
 
 import UIKit
 
@@ -14,7 +14,13 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+            // Do any additional setup after loading the view.
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard userNameTextField.text == "Admin", passwordTextField.text == "123" else { return }
+        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        welcomeVC.userName = userNameTextField.text
     }
 
     @IBAction func loginButtonPressed() {
@@ -25,23 +31,16 @@ class LoginViewController: UIViewController {
         }
     }
 
-
     @IBAction func forgotUserNamePasswordPressed(_ sender: UIButton) {
-
-
-    }
-
-
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard userNameTextField.text == "Admin", passwordTextField.text == "123" else { return }
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.userName = userNameTextField.text
+        switch sender.tag {
+        case 1: forgotUserName(orPassword: false)
+        default: forgotUserName(orPassword: true)
+        }
     }
 
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
         guard segue.source is WelcomeViewController else { return }
-            clearPassword(AndUserName: true)
+        clearPassword(AndUserName: true)
     }
 
     private func clearPassword(AndUserName name: Bool) {
@@ -50,7 +49,7 @@ class LoginViewController: UIViewController {
     }
 
 }
-//MARK: ALERT MESSAGES
+    //MARK: ALERT MESSAGES
 extension LoginViewController {
 
     private func invalidLoginOrMessageAlert() {
