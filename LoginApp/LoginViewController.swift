@@ -25,7 +25,7 @@ class LoginViewController: UIViewController {
 
     @IBAction func loginButtonPressed() {
         guard userNameTextField.text == "Admin", passwordTextField.text == "123" else {
-            invalidLoginOrMessageAlert()
+            invalidLoginOrPasswordAlert()
             clearPassword(AndUserName: false)
             return
         }
@@ -52,7 +52,7 @@ class LoginViewController: UIViewController {
     //MARK: ALERT MESSAGES
 extension LoginViewController {
 
-    private func invalidLoginOrMessageAlert() {
+    private func invalidLoginOrPasswordAlert() {
         let alert = UIAlertController(
             title: "Invalid login or password",
             message: "Please, enter correct login and password",
