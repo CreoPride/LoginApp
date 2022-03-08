@@ -31,19 +31,47 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UED-TU-MKO">
+                                <rect key="frame" x="154.5" y="169" width="66" height="41"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Log in"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="18R-md-Iom">
+                                <rect key="frame" x="60" y="220" width="255" height="28"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vbq-hz-9Z8">
+                                        <rect key="frame" x="0.0" y="0.0" width="117.5" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Forgot User Name?"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrA-14-57k">
+                                        <rect key="frame" x="137.5" y="0.0" width="117.5" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Forgot Password?"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray2Color"/>
                         <constraints>
+                            <constraint firstItem="18R-md-Iom" firstAttribute="centerX" secondItem="gDG-Xu-F81" secondAttribute="centerX" id="1kO-lc-FdC"/>
+                            <constraint firstItem="18R-md-Iom" firstAttribute="top" secondItem="UED-TU-MKO" secondAttribute="bottom" constant="10" id="NUH-aX-7dZ"/>
                             <constraint firstItem="gDG-Xu-F81" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="RuJ-I9-njt"/>
+                            <constraint firstItem="18R-md-Iom" firstAttribute="width" secondItem="gDG-Xu-F81" secondAttribute="width" id="Ynx-xH-u4Q"/>
+                            <constraint firstItem="UED-TU-MKO" firstAttribute="centerX" secondItem="vnJ-5V-3h8" secondAttribute="centerX" id="ZvX-Mg-GZo"/>
                             <constraint firstItem="gDG-Xu-F81" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="fHP-la-Jc6"/>
+                            <constraint firstItem="UED-TU-MKO" firstAttribute="top" secondItem="vnJ-5V-3h8" secondAttribute="bottom" constant="20" id="jnt-fX-MTM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gDG-Xu-F81" secondAttribute="trailing" constant="60" id="mI5-UZ-TrD"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="35" y="70"/>
+            <point key="canvasLocation" x="34.399999999999999" y="69.715142428785612"/>
         </scene>
     </scenes>
     <resources>
