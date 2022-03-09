@@ -104,5 +104,4 @@ extension LoginViewController {
         alert.addAction(action)
         present(alert, animated: true)
     }
-
 }
