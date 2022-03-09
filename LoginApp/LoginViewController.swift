@@ -65,15 +65,19 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
     private func checkLoginPassword() -> Bool {
         if userNameTextField.text == userName,
-           passwordTextField.text == password { return true }
-        else { return false }
+           passwordTextField.text == password {
+            return true
+        } else {
+            return false
+        }
     }
 
     private func clearPassword(AndUserName name: Bool) {
-        if name { userNameTextField.text?.removeAll() }
+        if name {
+            userNameTextField.text?.removeAll()
+        }
         passwordTextField.text?.removeAll()
     }
-
 }
     //MARK: ALERT MESSAGES
 extension LoginViewController {
