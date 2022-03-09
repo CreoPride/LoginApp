@@ -7,30 +7,22 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
 
+    private let userName = "admin"
+    private let password = "123"
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        self.view.endEditing(true)
+    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard userNameTextField.text == "Admin", passwordTextField.text == "123" else { return }
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         welcomeVC.userName = userNameTextField.text
-    }
-
-    @IBAction func loginButtonPressed() {
-        guard userNameTextField.text == "Admin", passwordTextField.text == "123" else {
-            invalidLoginOrPasswordAlert()
-            clearPassword(AndUserName: false)
-            return
-        }
-    }
-
-    @IBAction func forgotUserNamePasswordPressed(_ sender: UIButton) {
-        switch sender.tag {
-        case 1: forgotUserName(orPassword: false)
-        default: forgotUserName(orPassword: true)
-        }
     }
 
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
@@ -38,10 +30,50 @@ class LoginViewController: UIViewController {
         clearPassword(AndUserName: true)
     }
 
+    @IBAction func loginButtonPressed() {
+        if checkLoginPassword() {
+            performSegue(withIdentifier: "welcomeVCSegue", sender: nil)
+        } else {
+            invalidLoginOrPasswordAlert()
+            clearPassword(AndUserName: false)
+        }
+    }
+
+    @IBAction func forgotUserNamePasswordButtonsPressed(_ sender: UIButton) {
+        switch sender.tag {
+        case 1: forgotUserName(orPassword: false)
+        default: forgotUserName(orPassword: true)
+        }
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case userNameTextField:
+            passwordTextField.becomeFirstResponder()
+        default:
+            if checkLoginPassword() {
+                passwordTextField.resignFirstResponder()
+                performSegue(withIdentifier: "welcomeVCSegue", sender: nil)
+                return true
+            } else {
+                invalidLoginOrPasswordAlert()
+                clearPassword(AndUserName: false)
+            }
+        }
+        return false
+    }
+
+    private func checkLoginPassword() -> Bool {
+        if userNameTextField.text == userName,
+           passwordTextField.text == password { return true }
+        else { return false }
+    }
+
     private func clearPassword(AndUserName name: Bool) {
         if name { userNameTextField.text?.removeAll() }
         passwordTextField.text?.removeAll()
     }
+
 }
     //MARK: ALERT MESSAGES
 extension LoginViewController {
@@ -58,7 +90,7 @@ extension LoginViewController {
     }
 
     private func forgotUserName(orPassword password: Bool) {
-        let message = password ? "Your password is 123" : "Your name is Admin"
+        let message = password ? "Your password is \(self.password)" : "Your name is \(userName)"
         let alert = UIAlertController(
             title: "Oops!",
             message: message,
