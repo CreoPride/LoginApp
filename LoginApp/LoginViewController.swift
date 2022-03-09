@@ -12,11 +12,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-            // Do any additional setup after loading the view.
-    }
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard userNameTextField.text == "Admin", passwordTextField.text == "123" else { return }
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
@@ -47,7 +42,6 @@ class LoginViewController: UIViewController {
         if name { userNameTextField.text?.removeAll() }
         passwordTextField.text?.removeAll()
     }
-
 }
     //MARK: ALERT MESSAGES
 extension LoginViewController {
