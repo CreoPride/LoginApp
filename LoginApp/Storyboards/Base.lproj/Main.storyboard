@@ -50,7 +50,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="18R-md-Iom">
                                 <rect key="frame" x="32" y="220" width="256" height="28"/>
                                 <subviews>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vbq-hz-9Z8">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vbq-hz-9Z8">
                                         <rect key="frame" x="0.0" y="0.0" width="118" height="28"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -59,7 +59,7 @@
                                             <action selector="forgotUserNamePasswordButtonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Blg-oC-GPN"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrA-14-57k">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrA-14-57k">
                                         <rect key="frame" x="138" y="0.0" width="118" height="28"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -102,12 +102,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🖖" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vG-bX-FC5">
-                                <rect key="frame" x="132.5" y="186" width="55" height="61"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="51"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCL-OA-uMb">
                                 <rect key="frame" x="119.5" y="322" width="81" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
@@ -119,10 +113,16 @@
                                     <segue destination="0Km-t7-tWm" kind="unwind" unwindAction="unwind:" id="6g5-2q-Nzc"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, User Name!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kut-z2-sRb">
-                                <rect key="frame" x="31.5" y="129" width="257" height="33"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, User Name!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kut-z2-sRb">
+                                <rect key="frame" x="16" y="129" width="288" height="32.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🖖" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vG-bX-FC5">
+                                <rect key="frame" x="132.5" y="185" width="55" height="61"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="51"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -130,13 +130,13 @@
                         <color key="backgroundColor" systemColor="systemGray2Color"/>
                         <constraints>
                             <constraint firstItem="ZCL-OA-uMb" firstAttribute="centerX" secondItem="eec-YZ-ikc" secondAttribute="centerX" id="1Uj-Cf-k53"/>
+                            <constraint firstItem="eec-YZ-ikc" firstAttribute="trailing" secondItem="kut-z2-sRb" secondAttribute="trailing" constant="16" id="4eV-Dl-yhE"/>
                             <constraint firstItem="kut-z2-sRb" firstAttribute="top" secondItem="eec-YZ-ikc" secondAttribute="top" constant="129" id="Hjg-Wl-294"/>
                             <constraint firstItem="ZCL-OA-uMb" firstAttribute="width" secondItem="6g8-9X-axO" secondAttribute="height" multiplier="67:667" constant="26" id="N5P-qq-MDe"/>
                             <constraint firstItem="eec-YZ-ikc" firstAttribute="bottom" secondItem="ZCL-OA-uMb" secondAttribute="bottom" constant="141" id="Uev-5f-anD"/>
-                            <constraint firstItem="kut-z2-sRb" firstAttribute="centerX" secondItem="eec-YZ-ikc" secondAttribute="centerX" id="cvm-he-p8Z"/>
-                            <constraint firstItem="1vG-bX-FC5" firstAttribute="centerX" secondItem="kut-z2-sRb" secondAttribute="centerX" id="gVa-QA-bEW"/>
-                            <constraint firstItem="1vG-bX-FC5" firstAttribute="width" secondItem="kut-z2-sRb" secondAttribute="width" multiplier="0.214008" id="gr6-vi-bo2"/>
-                            <constraint firstItem="1vG-bX-FC5" firstAttribute="top" secondItem="kut-z2-sRb" secondAttribute="bottom" constant="24" id="uJp-Fs-Ggq"/>
+                            <constraint firstItem="kut-z2-sRb" firstAttribute="leading" secondItem="eec-YZ-ikc" secondAttribute="leading" constant="16" id="aqt-nR-ivm"/>
+                            <constraint firstItem="1vG-bX-FC5" firstAttribute="centerX" secondItem="eec-YZ-ikc" secondAttribute="centerX" id="gZU-Gw-t4h"/>
+                            <constraint firstItem="1vG-bX-FC5" firstAttribute="top" secondItem="kut-z2-sRb" secondAttribute="bottom" constant="23.5" id="okb-FT-0Oi"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="person.fill" catalog="system" selectedImage="person.fill" id="gUu-lZ-VLj"/>
@@ -148,7 +148,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ioi-Of-pEf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="0Km-t7-tWm" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1149" y="869"/>
+            <point key="canvasLocation" x="1147.5" y="868.30985915492954"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="IPB-GK-AG8">
@@ -194,12 +194,15 @@
                     </view>
                     <navigationItem key="navigationItem" id="Uw7-95-VmY">
                         <barButtonItem key="backBarButtonItem" title="Back" id="cpI-rV-8jX"/>
-                        <barButtonItem key="rightBarButtonItem" title="More Info" id="cdM-Ud-6lu">
+                        <barButtonItem key="rightBarButtonItem" title="Foto" id="cdM-Ud-6lu">
                             <connections>
                                 <segue destination="1kU-iD-oay" kind="show" id="lTY-LS-dgF"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="userInfoLabel" destination="o7Y-Nc-W4J" id="ioC-eI-qtw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aMU-tM-gvC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

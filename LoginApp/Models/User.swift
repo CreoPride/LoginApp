@@ -1,12 +1,12 @@
 
 struct User {
-    let userName: String
+    let name: String
     let password: String
     let person: Person
 
     static func getUser() -> User {
         User(
-            userName: "admin",
+            name: "admin",
             password: "123",
             person: .getPerson()
         )

@@ -22,7 +22,23 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarController.viewControllers else { return }
+        for viewController in viewControllers {
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.userName = user.name
+            } else if let navigationVC = viewController as? UINavigationController {
+                let userInfoVC = navigationVC.topViewController as! UserInfoViewController
+                navigationVC.navigationBar.prefersLargeTitles = false
+                userInfoVC.title = "\(user.person.name) \(user.person.surname)"
+                userInfoVC.userInfo = user.person.personalInfo
+            }
+        }
+
+
+
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        print(userName)
         welcomeVC.userName = userName
     }
 
@@ -32,7 +48,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func loginButtonPressed() {
-        guard userNameTextField.text == userName, passwordTextField.text == password else {
+        guard userNameTextField.text == user.name, passwordTextField.text == user.password else {
             showAlert(
                 title: "Invalid login or password",
                 message: "Please, enter correct login and password",
@@ -45,8 +61,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func forgotUserNamePasswordButtonsPressed(_ sender: UIButton) {
         sender.tag == 0
-            ? showAlert(title: "Oops!", message: "Your name is \(userName)")
-            : showAlert(title: "Oops!", message: "Your password is \(password)")
+        ? showAlert(title: "Oops!", message: "Your name is \(user.name)")
+        : showAlert(title: "Oops!", message: "Your password is \(user.password)")
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
