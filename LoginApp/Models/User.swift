@@ -18,6 +18,10 @@ struct Person {
     let personalInfo: String
     let image: Character
 
+    var fullname: String {
+        name + " " + surname
+    }
+
     static func getPerson() -> Person {
         Person(
             name: "Konstantin",

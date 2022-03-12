@@ -13,8 +13,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passwordTextField: UITextField!
 
     private let user = User.getUser()
-    private let userName = "admin"
-    private let password = "123"
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
@@ -26,20 +24,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         guard let viewControllers = tabBarController.viewControllers else { return }
         for viewController in viewControllers {
             if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.userName = user.name
+                welcomeVC.userName = user.person.fullname
             } else if let navigationVC = viewController as? UINavigationController {
                 let userInfoVC = navigationVC.topViewController as! UserInfoViewController
-                navigationVC.navigationBar.prefersLargeTitles = false
-                userInfoVC.title = "\(user.person.name) \(user.person.surname)"
+                userInfoVC.title = user.person.fullname
                 userInfoVC.userInfo = user.person.personalInfo
             }
         }
-
-
-
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        print(userName)
-        welcomeVC.userName = userName
     }
 
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
