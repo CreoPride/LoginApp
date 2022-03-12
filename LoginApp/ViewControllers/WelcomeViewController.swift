@@ -15,7 +15,7 @@ class WelcomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        makeGradientColor()
+       // makeGradientColor()
         welcomeLabel.text = "Welcome, \(userName ?? "")"
     }
 
