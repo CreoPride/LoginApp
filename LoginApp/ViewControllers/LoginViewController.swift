@@ -12,6 +12,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
 
+    private let user = User.getUser()
     private let userName = "admin"
     private let password = "123"
 
