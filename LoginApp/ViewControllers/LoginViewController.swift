@@ -24,12 +24,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         guard let viewControllers = tabBarController.viewControllers else { return }
         for viewController in viewControllers {
             if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.userName = user.person.fullname
+                welcomeVC.user = user
             } else if let navigationVC = viewController as? UINavigationController {
                 let userInfoVC = navigationVC.topViewController as! UserInfoViewController
-                userInfoVC.title = user.person.fullname
-                userInfoVC.userInfo = user.person.personalInfo
-                userInfoVC.image = user.person.image
+                userInfoVC.user = user
             }
         }
     }

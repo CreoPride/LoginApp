@@ -11,17 +11,17 @@ class UserInfoViewController: UIViewController {
 
     @IBOutlet weak var userInfoLabel: UILabel!
 
-    var userInfo: String!
-    var image: String!
+    var user: User!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        userInfoLabel.text = userInfo ?? "nothing"
+        self.title = user.person.fullname
+        userInfoLabel.text = user.person.personalInfo
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let fotoVC = segue.destination as? FotoViewController else { return }
-        fotoVC.foto = image ?? ""
+        fotoVC.user = user
     }
 
 }

@@ -11,11 +11,11 @@ class FotoViewController: UIViewController {
 
     @IBOutlet weak var fotoView: UIImageView!
 
-    var foto: String!
+    var user: User!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        fotoView.image = UIImage(named: foto)
+        fotoView.image = UIImage(named: user.person.image)
     }
 
     

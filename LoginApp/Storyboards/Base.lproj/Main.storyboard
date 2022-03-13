@@ -18,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="gDG-Xu-F81">
-                                <rect key="frame" x="60" y="60" width="200" height="89"/>
+                                <rect key="frame" x="40" y="60" width="240" height="89"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3tP-r4-WNy">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" textContentType="username"/>
                                         <connections>
@@ -29,7 +29,7 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vnJ-5V-3h8">
-                                        <rect key="frame" x="0.0" y="55" width="200" height="34"/>
+                                        <rect key="frame" x="0.0" y="55" width="240" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                                         <connections>
@@ -78,9 +78,9 @@
                             <constraint firstItem="18R-md-Iom" firstAttribute="top" secondItem="UED-TU-MKO" secondAttribute="bottom" constant="10" id="NUH-aX-7dZ"/>
                             <constraint firstItem="gDG-Xu-F81" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="RuJ-I9-njt"/>
                             <constraint firstItem="UED-TU-MKO" firstAttribute="centerX" secondItem="vnJ-5V-3h8" secondAttribute="centerX" id="ZvX-Mg-GZo"/>
-                            <constraint firstItem="gDG-Xu-F81" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="fHP-la-Jc6"/>
+                            <constraint firstItem="gDG-Xu-F81" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="fHP-la-Jc6"/>
                             <constraint firstItem="UED-TU-MKO" firstAttribute="top" secondItem="vnJ-5V-3h8" secondAttribute="bottom" constant="20" id="jnt-fX-MTM"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gDG-Xu-F81" secondAttribute="trailing" constant="60" id="mI5-UZ-TrD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gDG-Xu-F81" secondAttribute="trailing" constant="40" id="mI5-UZ-TrD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="01c-OB-vuO"/>
@@ -157,6 +157,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Bdd-Sl-Pd3"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2Bg-oM-Ibd">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" systemColor="systemIndigoColor"/>
