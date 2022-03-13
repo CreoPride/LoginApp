@@ -15,7 +15,7 @@ class WelcomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       // makeGradientColor()
+       // makeGradientColor() не смог победить конфликт градиента с TabBar
         welcomeLabel.text = "Welcome, \(user.person.fullname)!"
     }
 
