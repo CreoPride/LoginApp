@@ -210,21 +210,36 @@
             </objects>
             <point key="canvasLocation" x="2842.5" y="869.36619718309862"/>
         </scene>
-        <!--More Info View Controller-->
+        <!--Foto View Controller-->
         <scene sceneID="foX-XQ-JBt">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="1kU-iD-oay" customClass="MoreInfoViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="1kU-iD-oay" customClass="FotoViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pDc-uO-4bX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="goo-W0-Nx9">
+                                <rect key="frame" x="16" y="56" width="288" height="443"/>
+                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ZXL-4k-FlH"/>
                         <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="goo-W0-Nx9" firstAttribute="leading" secondItem="ZXL-4k-FlH" secondAttribute="leading" constant="16" id="2AP-4V-nel"/>
+                            <constraint firstItem="ZXL-4k-FlH" firstAttribute="trailing" secondItem="goo-W0-Nx9" secondAttribute="trailing" constant="16" id="66R-3X-jZH"/>
+                            <constraint firstItem="goo-W0-Nx9" firstAttribute="top" secondItem="ZXL-4k-FlH" secondAttribute="top" id="f0v-XG-kbz"/>
+                            <constraint firstItem="ZXL-4k-FlH" firstAttribute="bottom" secondItem="goo-W0-Nx9" secondAttribute="bottom" constant="20" id="o8s-hS-DnK"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UZl-LS-qYn"/>
+                    <connections>
+                        <outlet property="fotoView" destination="goo-W0-Nx9" id="ne4-pB-gm7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uiX-Df-B8o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3581" y="868"/>
+            <point key="canvasLocation" x="3579.375" y="867.25352112676057"/>
         </scene>
         <!--User-->
         <scene sceneID="g6D-id-8tc">

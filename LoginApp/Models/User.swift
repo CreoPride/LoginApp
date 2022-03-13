@@ -16,7 +16,7 @@ struct Person {
     let name: String
     let surname: String
     let personalInfo: String
-    let image: Character
+    let image: String
 
     var fullname: String {
         name + " " + surname
@@ -26,8 +26,11 @@ struct Person {
         Person(
             name: "Konstantin",
             surname: "Fomenkov",
-            personalInfo: "this field should contain information about me.",
-            image: "👨🏻‍🦲"
+            personalInfo: """
+            This field should contain information about me.
+            Unfortunately, I did not have enough time to approach this task.
+            """,
+            image: "026"
         )
     }
 }

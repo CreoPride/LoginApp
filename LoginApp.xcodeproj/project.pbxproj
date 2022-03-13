@@ -16,7 +16,7 @@
 		D1296F8827D7BA3000384AAD /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1296F8727D7BA3000384AAD /* WelcomeViewController.swift */; };
 		D146254D27DCA5C800C3C958 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D146254C27DCA5C800C3C958 /* User.swift */; };
 		D146255127DD095F00C3C958 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D146255027DD095F00C3C958 /* UserInfoViewController.swift */; };
-		D146255327DD098E00C3C958 /* MoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D146255227DD098E00C3C958 /* MoreInfoViewController.swift */; };
+		D146255327DD098E00C3C958 /* FotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D146255227DD098E00C3C958 /* FotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,7 @@
 		D1296F8727D7BA3000384AAD /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		D146254C27DCA5C800C3C958 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D146255027DD095F00C3C958 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
-		D146255227DD098E00C3C958 /* MoreInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoViewController.swift; sourceTree = "<group>"; };
+		D146255227DD098E00C3C958 /* FotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +79,7 @@
 				D1296F7727D73C6700384AAD /* LoginViewController.swift */,
 				D1296F8727D7BA3000384AAD /* WelcomeViewController.swift */,
 				D146255027DD095F00C3C958 /* UserInfoViewController.swift */,
-				D146255227DD098E00C3C958 /* MoreInfoViewController.swift */,
+				D146255227DD098E00C3C958 /* FotoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -193,7 +193,7 @@
 				D1296F7827D73C6700384AAD /* LoginViewController.swift in Sources */,
 				D146255127DD095F00C3C958 /* UserInfoViewController.swift in Sources */,
 				D1296F8827D7BA3000384AAD /* WelcomeViewController.swift in Sources */,
-				D146255327DD098E00C3C958 /* MoreInfoViewController.swift in Sources */,
+				D146255327DD098E00C3C958 /* FotoViewController.swift in Sources */,
 				D1296F7427D73C6700384AAD /* AppDelegate.swift in Sources */,
 				D146254D27DCA5C800C3C958 /* User.swift in Sources */,
 				D1296F7627D73C6700384AAD /* SceneDelegate.swift in Sources */,

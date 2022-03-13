@@ -29,6 +29,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 let userInfoVC = navigationVC.topViewController as! UserInfoViewController
                 userInfoVC.title = user.person.fullname
                 userInfoVC.userInfo = user.person.personalInfo
+                userInfoVC.image = user.person.image
             }
         }
     }
