@@ -15,7 +15,7 @@ class FotoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        fotoView.image = UIImage(named: user.person.image)
+        fotoView.image = UIImage(named: user.person.foto)
         makeGradient(
             from: .green,
             to: .lightGray,

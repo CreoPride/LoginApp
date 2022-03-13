@@ -15,9 +15,13 @@ class WelcomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       // makeGradientColor() не смог победить конфликт градиента с TabBar
         welcomeLabel.text = "Welcome, \(user.person.fullname)!"
-        makeGradient(from: .green, to: .lightGray, start: CGPoint(x: 0, y: 0), end: CGPoint(x: 1, y: 1))
+        makeGradient(
+            from: .green,
+            to: .lightGray,
+            start: CGPoint(x: 0, y: 0),
+            end: CGPoint(x: 1, y: 1)
+        )
     }
 }
 
