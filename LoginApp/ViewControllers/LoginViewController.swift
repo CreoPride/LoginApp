@@ -14,6 +14,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
     private let user = User.getUser()
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        makeGradient(
+            from: .lightGray,
+            to: .white,
+            start: CGPoint(x: 0, y: 0),
+            end: CGPoint(x: 0, y: 1)
+        )
+    }
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)

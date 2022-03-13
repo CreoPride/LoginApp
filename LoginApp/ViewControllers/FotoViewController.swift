@@ -16,8 +16,11 @@ class FotoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fotoView.image = UIImage(named: user.person.image)
+        makeGradient(
+            from: .green,
+            to: .lightGray,
+            start: CGPoint(x: 1, y: 0),
+            end: CGPoint(x: 0, y: 1)
+        )
     }
-
-    
-
 }
