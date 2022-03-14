@@ -7,17 +7,6 @@
 
 import UIKit
 
-extension UIViewController {
-    func makeGradient(from: UIColor, to: UIColor, start: CGPoint, end: CGPoint) {
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = view.frame
-        gradientLayer.colors = [from.cgColor, to.cgColor]
-        gradientLayer.startPoint = start
-        gradientLayer.endPoint = end
-        view.layer.insertSublayer(gradientLayer, at: 0)
-    }
-}
-
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var userNameTextField: UITextField!
@@ -47,7 +36,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             if let welcomeVC = viewController as? WelcomeViewController {
                 welcomeVC.user = user
             } else if let navigationVC = viewController as? UINavigationController {
-                let userInfoVC = navigationVC.topViewController as! UserInfoViewController
+                guard let userInfoVC = navigationVC.topViewController as? UserInfoViewController else { return }
                 userInfoVC.user = user
             }
         }
@@ -85,7 +74,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         return true
     }
 }
-    // MARK: ALERT MESSAGE
+    // MARK: Extensions
 extension LoginViewController {
 
     private func showAlert(title: String, message: String, textField: UITextField? = nil) {
@@ -95,5 +84,16 @@ extension LoginViewController {
         }
         alert.addAction(okAction)
         present(alert, animated: true)
+    }
+}
+
+extension UIViewController {
+    func makeGradient(from: UIColor, to: UIColor, start: CGPoint, end: CGPoint) {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = view.frame
+        gradientLayer.colors = [from.cgColor, to.cgColor]
+        gradientLayer.startPoint = start
+        gradientLayer.endPoint = end
+        view.layer.insertSublayer(gradientLayer, at: 0)
     }
 }
